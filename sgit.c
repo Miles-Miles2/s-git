@@ -28,7 +28,8 @@ int main(int numArgs, char* args[]) {
     printf(ANSI_COLOR_RESET);
     switch (numArgs) {
         case 1:
-            //help();
+            help();
+            /*
             int numLines = 0;
             char** lines = constructFile("./project/.sgit.txt", "2ndfile.txt", &numLines, -1);
             //printf("returned %d lines\n", numLines);
@@ -37,6 +38,7 @@ int main(int numArgs, char* args[]) {
                 printf(lines[i]);
             }
             break;
+            */
         case 2:
             if (strcmp(args[1], "help") == 0) {
                 help();
@@ -205,7 +207,7 @@ void init(char* dir) {
 }
 
 void help() {
-    printf(ANSI_BOLD "Commands: sgit" ANSI_COLOR_RESET "\n\thelp - show this message\n\tinit DIRECTORY - initialize repository in path specified, relative to current directory\ncheckout DIRECTORY COMMIT_NUM - Revert to previous commit, deleting current state");
+    printf(ANSI_BOLD "Commands: sgit" ANSI_COLOR_RESET "\n\thelp - show this message\n\tinit DIRECTORY - initialize repository in path specified, relative to current directory\n\tcommit DIRECTORY MESSAGE - Save current files to repo\n\tcheckout DIRECTORY COMMIT_NUM - Revert to previous commit, deleting current state");
 }
 
 void checkout(int checkoutNum, char* dir) {
