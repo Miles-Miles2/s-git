@@ -1,0 +1,28 @@
+>>> init repo
+>>> initcommit
+$$newDocument.txt
+some new lines in this file
+
+$
+>>> commit 0 2nd commit
+>>newDocument.txt
+1;+added a new line
+1;-
+2;+some new lines
+<
+>>> commit 1 3nd commit
+>>newDocument.txt
+3;+
+3;+new line from commit 1
+<
+>>> commit 2 4th commit
+>>newDocument.txt
+5;+Add
+<
+>>> commit 3 message
+>>newDocument.txt
+4;+adding new lines to commit
+4;-
+5;-
+<
+>
